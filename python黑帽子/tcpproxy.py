@@ -6,8 +6,8 @@ import threading
 def main():
 
 	#没有华丽的命令行解析
-	if len(sys.argv[1:]) != 5:
-		print "Usage: ./proxy.py [local_host] [local_port] [remote_host] [remote_port] [remote_port] [remote_first]"
+	if len(sys.argv[1:]) not in (5,6):
+		print "Usage: ./proxy.py [local_host] [local_port] [remote_host] [remote_port] [remote_port] [remote_first] [whether_timewait]"
 		print "Example: ./proxy.py 127.0.0.1 9000 10.12.131.1 9000 True"
 
 		sys.exit(0)
@@ -23,15 +23,20 @@ def main():
 	#告诉代理在发送给远程主机之前连接和接受数据
 	receive_first = sys.argv[5]
 
+	if len(sys.argv[1:]) == 6:
+		whether_timewait = int(sys.argv[6])
+	else:
+		whether_timewait = 0;
+
 	if "True" in receive_first or "true" in receive_first or "TRUE" in receive_first :
 		receive_first = True
 	else:
 		receive_first = False
 
 	#现在设置好我们的监听 socket
-	server_loop(local_host,local_port,remote_host,remote_port,receive_first)
+	server_loop(local_host,local_port,remote_host,remote_port,receive_first,whether_timewait)
 
-def server_loop(local_host,local_port,remote_host,remote_port,receive_first):
+def server_loop(local_host,local_port,remote_host,remote_port,receive_first,whether_timewait):
 
 	server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -53,11 +58,11 @@ def server_loop(local_host,local_port,remote_host,remote_port,receive_first):
 		print "[==>] Received incoming connection from %s:%d" % (addr[0],addr[1])
 
 		#开启一个线程与远程主机通信
-		proxy_thread = threading.Thread(target = proxy_handler,args = (client_socket,remote_host,remote_port,receive_first))
+		proxy_thread = threading.Thread(target = proxy_handler,args = (client_socket,remote_host,remote_port,receive_first,whether_timewait))
 
 		proxy_thread.start()
 
-def proxy_handler(client_socket,remote_host,remote_port,receive_first):
+def proxy_handler(client_socket,remote_host,remote_port,receive_first,whether_timewait):
 
 	#连接远程主机
 	remote_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -67,7 +72,7 @@ def proxy_handler(client_socket,remote_host,remote_port,receive_first):
 	#如果必要从远程主机接收数据
 	if receive_first:
 
-		remote_buffer = receive_from(remote_socket)
+		remote_buffer = receive_from(remote_socket,whether_timewait)
 		hexdump(remote_buffer)
 
 		#发送给我们的响应处理
@@ -82,7 +87,7 @@ def proxy_handler(client_socket,remote_host,remote_port,receive_first):
 	while True:
 
 		#从本地读取数据
-		local_buffer = receive_from(client_socket)
+		local_buffer = receive_from(client_socket,whether_timewait)
 
 		if len(local_buffer):
 
@@ -97,7 +102,7 @@ def proxy_handler(client_socket,remote_host,remote_port,receive_first):
 			print "[==>] Sent to remote."
 
 		#接收响应的数据
-		remote_buffer = receive_from(remote_socket)
+		remote_buffer = receive_from(remote_socket,whether_timewait)
 
 		if len(remote_buffer):
 
@@ -131,32 +136,34 @@ def hexdump(src,length = 16):
 
 	print b'\n'.join(result)
 
-def receive_from(connection):
+def receive_from(connection,whether_timewait):
 
 	buf = ""
 
-	#我们设置了两秒的超时，这取决于目标的情况，可能需要调整
-	connection.settimeout(2)
-	try:
-		#持续从缓存中读取数据直到没有数据或者超时
-		while True:
-			data = connection.recv(4096)
-			buf += data
-			if not data:
-				break
-	except:
-		pass
 
-	#非超时的情况
-	# try:
-	# 	#持续从缓存中读取数据直到没有数据或者超时
-	# 	while True:
-	# 		data = connection.recv(4096)
-	# 		buf += data
-	# 		if len(data) < 4096:
-	# 			break
-	# except:
-	# 	pass	
+	if whether_timewait > 0:
+		#我们设置了n秒的超时，这取决于目标的情况，可能需要调整
+		connection.settimeout(whether_timewait)
+		try:
+			#持续从缓存中读取数据直到没有数据或者超时
+			while True:
+				data = connection.recv(4096)
+				buf += data
+				if not data:
+					break
+		except:
+			pass
+	else:
+		#非超时的情况
+		try:
+			#持续从缓存中读取数据直到没有数据或者超时
+			while True:
+				data = connection.recv(4096)
+				buf += data
+				if len(data) < 4096:
+					break
+		except:
+			pass	
 
 	return buf
 
