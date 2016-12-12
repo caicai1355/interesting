@@ -8,7 +8,7 @@ def main():
 	#没有华丽的命令行解析
 	if len(sys.argv[1:]) not in (5,6):
 		print "Usage: ./proxy.py [local_host] [local_port] [remote_host] [remote_port] [remote_port] [remote_first] [whether_timewait]"
-		print "Example: ./proxy.py 127.0.0.1 9000 10.12.131.1 9000 True"
+		print "Example: ./proxy.py 127.0.0.1 9000 10.12.131.1 9000 True 2"
 
 		sys.exit(0)
 

@@ -25,4 +25,5 @@ def ssh_conmmand(ip,user,passwd,command):
 				ssh_session,send(str(e))
 		client.close()
 	return
-ssh_conmmand("192.168.162.115","root","123456","ClientConnected")
+ssh_conmmand("192.168.160.12","administrator","123","ClientConnected")
+#ssh_conmmand("192.168.162.115","root","123456","ClientConnected")

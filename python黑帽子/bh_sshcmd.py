@@ -18,4 +18,5 @@ def ssh_conmmand(ip,user,passwd,command):
 		print ssh_session.recv(1024)
 	return
 
-ssh_conmmand("192.168.162.115","root","123456","dir")
+ssh_conmmand("192.168.160.12","administrator","123","dir")
+#ssh_conmmand("192.168.162.115","root","123456","dir")
