@@ -1,0 +1,1661 @@
+=========================================================
+CVE号：
+   暂无CVE号
+=========================================================
+CVE号：
+   暂无CVE号
+=========================================================
+CVE号：
+   CVE-1999-0001
+CVE英文标题：
+   ip_input.c in BSD-derived TCP/IP implementations allows remote attackers to cause a denial of service (crash or hang) via crafted packets.
+CNNVE中文标题：
+   BSD-获得TCP/IP实现中ip_input.c拒绝服务（崩溃或者挂起）漏洞
+CNNVE信息：
+   BSD-获得TCP/IP实现中的ip_input.c存在漏洞，远程攻击者利用该漏洞通过制作数据包导致拒绝服务（崩溃或者挂起）。    
+CNNVD号：
+   CNNVD-199912-105
+CVSS分值：
+   5
+机密性影响：
+   NONE
+完整性影响：
+   NONE
+可用性影响：
+   PARTIAL
+攻击复杂度：
+   LOW
+攻击向量：
+   NETWORK
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   OpenBSD 2.4
+FreeBSD 2.2.6
+FreeBSD 2.1.7
+FreeBSD 2.2.5
+FreeBSD 2.1.7.1
+FreeBSD 2.1.6
+FreeBSD 3.0
+FreeBSD 2.0.1
+FreeBSD 2.2.3
+FreeBSD 1.0
+FreeBSD 2.2.4
+OpenBSD 2.3
+FreeBSD 2.0
+FreeBSD 2.0.5
+FreeBSD 2.1.5
+FreeBSD 2.1.6.1
+FreeBSD 2.2.2
+FreeBSD 2.2
+FreeBSD 1.1
+FreeBSD 2.2.8
+FreeBSD 1.1.5.1
+FreeBSD 1.2
+CWE (弱点类目)：
+   CWE-20
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1999-12-30 00:00:00
+cnnvd更新日期：
+   2010-05-11 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0002
+CVE英文标题：
+   Buffer overflow in NFS mountd gives root access to remote attackers, mostly in Linux systems.
+CNNVE中文标题：
+   多厂商Linux Mountd漏洞
+CNNVE信息：
+   NFS mountd存在缓冲区溢出漏洞。远程攻击者可以获取根访问，且大多发生在Linux系统下。    
+CNNVD号：
+   CNNVD-199810-012
+CVSS分值：
+   10
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Red Hat Linux 5.1
+Red Hat Linux 4.2
+Red Hat Linux 4.1
+Red Hat Linux 3.0.3
+Red Hat Linux 2.1
+Red Hat Linux 5.0
+Red Hat Linux 2.0
+Red Hat Linux 4.0
+CWE (弱点类目)：
+   CWE-119
+漏洞类型：
+   缓冲区溢出
+cnnvd发布日期：
+   1998-10-12 00:00:00
+cnnvd更新日期：
+   2009-01-26 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   The following fix information is known to be available:
+Caldera:
+Caldera provided a fixed version as nfs-server-2.2beta35-2 on Aug 28. It is available from: 
+ftp://ftp.caldera.com/pub/OpenLinux/updates/1.2/013
+10fdb82ed8fd1b88c73fd962d8980bb4 RPMS/nfs-server-2.2beta35-2.i386.rpm 59e275b1ed6b98a39a38406f0415a226 RPMS/nfs-server-clients-2.2beta35-2.i386.rpm 6b075faf1d424e099c6932d95e76fd6b SRPMS/nfs-server-2.2beta35-2.src.rpm
+Red Hat Software, Inc.
+All versions of Red Hat Linux as of October 8/1998 are vulnerable, and we have provided fixed packages for all our users. Updated nfs-server packages are available from our site at:
+http://www.redhat.com/support/docs/errata.html
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0003
+CVE英文标题：
+   Execute commands as root via buffer overflow in Tooltalk database server (rpc.ttdbserverd).
+CNNVE中文标题：
+   多家厂商CDE ToolTalk数据库服务器rpc.ttdbserverd远程缓冲区溢出漏洞
+CNNVE信息：
+   Common Desktop Environment (CDE)是一款集成图形用户接口，运行在各种UNIX和LINUX操作系统下，CDE ToolTalk服务允许独立的开发应用程序，使应用程序可以跨主机和平台交换ToolTalk信息相互之间通信，使用ToolTalk服务，应用程序可以建立开放协议允许各种程序进行交换和新的程序插入到系统中可以尽可能最小化重新配置。ToolTalk RPC数据库服务程序，rpc.ttdbserverd用于管理ToolTalk应用通信。很多Unix系统厂商默认都安装了CDE。ToolTalk数据库服务的一个执行错误可以使远程攻击者在支持ToolTalk服务的主机上以超级用户的权限运行任意指令。在ToolTalk数据库服务发生执行错误的时候，远程客户端发送一个恶意的RPC消息可能引起一个堆变量的溢出，执行恶意RPC消息里的任意指令，从而获得主机的root用户权限。<*链接：http://online.securityfocus.com/advisories/281        http://marc.theaimsgroup.com/?l=bugtraq&m=90461590528287&w=2        http://www.cert.org/advisories/CA-1998-11.html        ftp://patches.sgi.com/support/free/security/advisories/19981101-01-P        ftp://patches.sgi.com/support/free/security/advisories/20020302-01-A*>    
+CNNVD号：
+   CNNVD-199804-004
+CVSS分值：
+   10
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   HP-UX 11.00
+SGI IRIX 6.4
+IBM AIX 4.1.2
+SGI IRIX 5.2
+IBM AIX 4.1.4
+IBM AIX 4.3
+SGI IRIX 6.0
+IBM AIX 4.1.5
+IBM AIX 4.1.3
+SGI IRIX 6.3
+IBM AIX 4.2.1
+SGI IRIX 6.2
+SGI IRIX 5.3
+IBM AIX 4.1
+HP HP-UX 10.2
+IBM AIX 4.2
+HP HP-UX 10.3
+HP HP-UX 10.01
+SGI IRIX 6.1
+IBM AIX 4.1.1
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   其他
+cnnvd发布日期：
+   1998-04-01 00:00:00
+cnnvd更新日期：
+   2006-11-16 00:00:00 
+攻击路径：
+   远程※本地
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   临时解决方法：
+如果您不能立刻安装补丁或者升级，CNNVD建议您采取以下措施以降低威胁：
+* 在没有安装补丁之前，建议您立刻关闭rpc.ttdbserverd程序。
+以Solaris系统为例：
+首先变成root身份，然后使用您熟悉的编辑器打开/etc/inetd.conf文件，找到如下行：
+100083/1 tli  rpc/tcp wait root /usr/dt/bin/rpc.ttdbserverd rpc.ttdbserverd
+在该行的开始处增加"#"号来将其注释：
+#100083/1 tli  rpc/tcp wait root /usr/dt/bin/rpc.ttdbserverd rpc.ttdbserverd
+存盘退出。然后重启inetd:
+# ps -ef|grep inetd
+# kill -HUP 
+厂商补丁：
+IBM
+---
+目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载：
+http://www.ers.ibm.com/
+
+IBM AIX 4.1:
+IBM APAR IX81440
+IBM AIX 4.1.1:
+IBM APAR IX81440
+IBM AIX 4.1.2:
+IBM APAR IX81440
+IBM AIX 4.1.3:
+IBM APAR IX81440
+IBM AIX 4.1.4:
+IBM APAR IX81440
+IBM AIX 4.1.5:
+IBM APAR IX81440
+IBM AIX 4.2:
+IBM APAR IX81441
+IBM AIX 4.2.1:
+IBM APAR IX81441
+IBM AIX 4.3:
+IBM APAR IX81442
+SGI
+---
+SGI已经为此发布了两个安全公告(19981101-01-P,20020302-01-A)以及相应补丁:
+19981101-01-P：Vulnerability in ToolTalk RPC Service
+链接：
+ftp://patches.sgi.com/support/free/security/advisories/19981101-01-P
+
+20020302-01-A：Additional CDE and CDE ToolTalk Vulnerabilities
+链接：
+ftp://patches.sgi.com/support/free/security/advisories/20020302-01-A
+Sun
+---
+目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载：
+http://sunsolve.sun.com/sunsolve/pubpatches/patches.html
+
+Sun Solaris 1.1:
+Sun Solaris 1.1.1:
+Sun Solaris 1.1.2:
+Sun Solaris 1.1.3 _U1:
+Sun Solaris 1.1.3:
+Sun Solaris 1.1.4 -JL:
+Sun Solaris 1.1.4:
+Sun Solaris 1.2:
+Sun Solaris 2.0:
+Sun Solaris 2.1:
+Sun Solaris 2.2:
+Sun Solaris 2.3:
+Sun Patch 101495-03
+Sun Solaris 2.4 _x86:
+Sun Patch 108641-01
+Sun Solaris 2.4:
+Sun Patch 102734-05
+Sun Solaris 2.5 _x86:
+Sun Solaris 2.5:
+Sun Solaris 2.5.1 _x86:
+Sun Solaris 2.5.1 _ppc:
+Sun Solaris 2.5.1:
+Sun Solaris 2.6 _x86:
+Sun Patch 105803-05
+Sun Solaris 2.6:
+Sun Patch 105802-05
+TriTeal
+-------
+目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载：
+http://www.triteal.com/support
+
+TriTeal TED CDE 4.4
+Xi Graphics
+-----------
+目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载：
+ftp://ftp.xig.com:/pub/updates/cde/1.2.3/C1203.002.tar.gz
+
+ftp://ftp.xig.com:/pub/updates/cde/1.2.3/C1203.002.txt
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0004
+CVE英文标题：
+   MIME buffer overflow in email clients, e.g. Solaris mailtool and Outlook.
+CNNVE中文标题：
+   多个供应商MIME-aware Mail以及News Clients漏洞
+CNNVE信息：
+   电子邮件客户端中存在MIME缓冲区溢出漏洞，例如：mailtool以及Outlook。    
+CNNVD号：
+   CNNVD-199712-011
+CVSS分值：
+   5
+机密性影响：
+   NONE
+完整性影响：
+   NONE
+可用性影响：
+   PARTIAL
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   HP dtmail
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   缓冲区溢出
+cnnvd发布日期：
+   1997-12-16 00:00:00
+cnnvd更新日期：
+   2005-10-20 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   125
+公告与补丁：
+   Patches and upgrades exist for most of the popular packages which were affected by this problem. CERT advisory CA-98.10.mime_buffer_overflows details individual vendor responses to the problem. In addition, it gives references to a number of solutions that allow for the eilimination of externally originating mail attempting to exploit this vulnerability by utilizing filtering at the SMTP server. These solutions, however, should not be considered a solution, but rather a temporary measure until all possibly affected systems can be patched.
+Mutt versions up to and including 0.93.1(i) are vulnerable. The bug has been fixed as of mutt 0.93.2(i). A patch was distributed on Usenet on July 29, 1998.
+Users of older versions should upgrade as soon as possible. Mutt 0.93.2(i) is available from 
+ftp://ftp.guug.de/pub/mutt/
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0005
+CVE英文标题：
+   Arbitrary command execution via IMAP buffer overflow in authenticate command.
+CNNVE中文标题：
+   University of Washington imapd远程缓冲区溢出漏洞
+CNNVE信息：
+   University of Washington imapd是一种Internet邮件接收协议的开放源码的实现。通过身份验证命令中的IMAP缓冲区溢出，执行任意命令。    
+CNNVD号：
+   CNNVD-199807-024
+CVSS分值：
+   10
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Netscape Netscape Messaging Server 3.55
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   其他
+cnnvd发布日期：
+   1998-07-20 00:00:00
+cnnvd更新日期：
+   2012-11-28 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   临时解决方法：
+如果您不能立刻安装补丁或者升级，CNNVD建议您采取以下措施以降低威胁：
+* 暂时停止imapd服务。
+厂商补丁：
+University of Washington
+------------------------
+目前厂商还没有提供补丁或者升级程序，我们建议使用此软件的用户随时关注厂商的主页以获取最新版本：
+
+http://www.washington.edu/imap/
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0006
+CVE英文标题：
+   Buffer overflow in POP servers based on BSD/Qualcomm's qpopper allows remote attackers to gain root access using a long PASS command.
+CNNVE中文标题：
+   Qualcomm QPopper多个命令远程缓冲区溢出漏洞
+CNNVE信息：
+   QPopper是一款由Qualcomm开发和维护免费开放源代码的软件，可使用在多种Linux和Unix操作系统下。2.5版本以前的qpopper存在许多缓冲区溢出漏洞，远程攻击者可以利用这些漏洞通过溢出攻击在受影响主机执行任意指令。漏洞存在于qpopper没有正确检查过滤用户输入的POP命令(包括USER、PASS)，如果参数超过1024字节就会产生缓冲区溢出。这个漏洞在Bugtraq被广泛的讨论，已经有基于Linux和*BSD系统的攻击程序。确认主机是否受影响，可以使用下面的命令：% telnet yourmailhost.your.domain.com 110Trying 123.123.123.123Connected to mailhost+OK QPOP (version 2.4) at yourmailhost.your.domain.com starting如果返回的版本是2.5以前(包括2.5 beta)，那么说明你的主机受影响，请尽快升级到最新版本。    
+CNNVD号：
+   CNNVD-199807-013
+CVSS分值：
+   10
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   其他
+cnnvd发布日期：
+   1998-07-14 00:00:00
+cnnvd更新日期：
+   2005-05-02 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   133
+公告与补丁：
+   临时解决方法：
+如果您不能立刻安装补丁或者升级，CNNVD建议您采取以下措施以降低威胁：
+* 暂时关闭pop服务，或者在边界防火墙设置策略，只允许可信用户访问。
+厂商补丁：
+Qualcomm
+--------
+请到厂商下载当前最新版本：
+ftp://ftp.qualcomm.com/
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0007
+CVE英文标题：
+   Information from SSL-encrypted sessions via PKCS #1.
+CNNVE中文标题：
+   SSL-encrypted会话信息通过PKCS #1漏洞
+CNNVE信息：
+   通过PKCS #1从SSL-encrypted会话获得的信息。    
+CNNVD号：
+   CNNVD-199806-019
+CVSS分值：
+   5
+机密性影响：
+   PARTIAL
+完整性影响：
+   NONE
+可用性影响：
+   NONE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Microsoft exchange_srv 5.5
+Netscape Netscape Proxy Server 3.5.1
+Netscape Netscape Enterprise Server 2.0
+Microsoft IIS 3.0
+Netscape Collabra Server 3.5.2
+Netscape Netscape Messaging Server 3.54
+Netscape FastTrack 3.0.1B
+Microsoft IIS 4.0
+Microsoft Site Server 3.0
+Netscape Netscape Enterprise Server 3.5.1
+Netscape Netscape Directory Server 3.12
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1998-06-26 00:00:00
+cnnvd更新日期：
+   2006-11-16 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0008
+CVE英文标题：
+   Buffer overflow in NIS+, in Sun's rpc.nisd program.
+CNNVE中文标题：
+   多家厂商NIS+远程缓冲区溢出漏洞
+CNNVE信息：
+   NIS+和NIS被设计用来对分布于网络上的多个主机上用户、机器和其它信息资源进行集中化的管理。NIS+是NIS的替代产品。某些版本的NIS+系统实现上存在一个缓冲区溢出漏洞，远程攻击者可能利用此漏洞通过溢出攻击在主机上以root用户的权限执行任意指令。根据主机的配置情况，远程攻击者可能取得主机的root用户权限或对主机造成拒绝服务攻击，这导致所有依靠NIS+的系统失去可用性。另外，如果NIS+运行了NIS兼容模式，攻击者利用此漏洞使NIS+主机崩溃以后，可以冒充NIS服务器取得所有依靠NIS进行认证的主机的访问权限。rpc.nisd程序是NIS+服务的实现，一般情况下，发往此RPC服务的数据有个明确的最大长度，这样不会导致缓冲区溢出。但有一个NIS+参数：nis_name没有指定的最大长度，这种情况下最大长度默认为一个不安全的值，因为NIS+把数据复制到一个定长的缓冲区中，远程攻击者可以破坏堆栈执行攻击者指定的任意指令。    
+CNNVD号：
+   CNNVD-199806-008
+CVSS分值：
+   10
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   HP-UX 11.00
+HP HP-UX 10.34
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1998-06-08 00:00:00
+cnnvd更新日期：
+   2006-11-16 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   临时解决方法：
+如果您不能立刻安装补丁或者升级，CNNVD建议您采取以下措施以降低威胁：
+* 检查你的portmap是否支持tcp_wrapper，如果支持，在/etc/hosts.allow中设定允许进行RPC服务查询的主机或者网络。例如：
+
+portmap: .bar.com
+
+* 使用防火墙软件，限制未授权的RPC查询请求。
+* 如果不需要该RPC服务，关闭该RPC服务或者portmap。
+厂商补丁：
+Sun
+---
+Sun已经为此发布了一个安全公告(SUN-00170)以及相应补丁:
+SUN-00170：rpc.nisd
+链接：
+http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc;=secbull/170&type;=0&nav;=sec.sba
+
+补丁下载：
+http://sunsolve.sun.com/sunsolve/pubpatches/patches.html
+
+补丁情况：
+SunOS             Patch ID        
+_____             _________
+SunOS 5.6         105401-13               
+SunOS 5.6_x86     105402-13
+SunOS 5.5.1               103612-41
+SunOS 5.5.1_x86   103613-41
+SunOS 5.5         103187-38
+SunOS 5.5_x86     103188-38
+SunOS 5.4         101973-35
+SunOS 5.4_x86     101974-35
+SunOS 5.3         101318-91        
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0009
+CVE英文标题：
+   Inverse query buffer overflow in BIND 4.9 and BIND 8 Releases.
+CNNVE中文标题：
+   多家厂商BIND iquery远程缓冲区溢出漏洞
+CNNVE信息：
+   BIND是一种被广泛应用的DNS服务器程序，由Internet Software Consortium开发维护。低于4.9.7和8.1.2的BIND版本中在处理反向查询时存在一个严重的缓冲区溢出漏洞，远程攻击者可能利用此漏洞在主机上以root用户的权限执行任意指令。当req_iquery()函数在处理一个反向域名解析请求时，如果用户提供超长的数据，将导致发生堆栈溢出，远程攻击者可能通过溢出攻击获取主机的root用户权限。这个漏洞影响所有使用有问题BIND版本的系统，而且已经有很多攻击程序流传开来。<*链接：http://www.cert.org/advisories/CA-1998-05.html        ftp://patches.sgi.com/support/free/security/advisories/19980603-01-PX        ftp://patches.sgi.com/support/free/security/advisories/19980603-02-PX        ftp://ftp.auscert.org.au/pub/auscert/ESB/ESB-98.137        http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/180&type=0&nav=sec.sba*>    
+CNNVD号：
+   CNNVD-199804-012
+CVSS分值：
+   10
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   SGI IRIX 4.0.1
+NetBSD 1.1
+Red Hat Linux 4.1
+SGI IRIX 5.2
+IBM AIX 4.1.4
+SGI IRIX 6.0
+SGI IRIX 4.0.5A
+NetBSD 1.3
+SGI IRIX 4.0.5 IOP
+IBM AIX 4.1.3
+SGI IRIX 6.3
+NetBSD 1.2
+SGI IRIX 4.0.5F
+NetBSD 1.3.1
+SGI IRIX 4.0.5D
+IBM AIX 4.2.1
+SGI IRIX 4.0.4T
+SGI IRIX 5.0.1
+SGI IRIX 6.2
+SGI IRIX 4.0.4
+SGI IRIX 4.0.5G
+SGI IRIX 4.0.1T
+SGI IRIX 5.1
+IBM AIX 4.2
+Red Hat Linux 5.0
+SGI IRIX 6.1
+SGI IRIX 4.0.2
+Red Hat Linux 4.2
+SGI IRIX 4.0.5E
+IBM AIX 4.1.2
+SGI IRIX 4.0.4B
+IBM AIX 4.3
+ISC BIND 8.1
+IBM AIX 4.1.5
+ISC BIND 8.1.1
+SGI IRIX 4.0.5H
+NetBSD 1.2.1
+NetBSD 1.0
+Red Hat Linux 4.0
+SGI IRIX 4.0.5
+SGI IRIX 4.0.3
+SGI IRIX 5.1.1
+SGI IRIX 5.3
+IBM AIX 4.1
+ISC BIND 4.9.6
+IBM AIX 4.1.1
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   其他
+cnnvd发布日期：
+   1998-04-08 00:00:00
+cnnvd更新日期：
+   2005-05-02 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   临时解决方法：
+如果您不能立刻安装补丁或者升级，CNNVD建议您采取以下措施以降低威胁：
+* 没有合适的临时解决方法。
+厂商补丁：
+HP
+--
+HP已经为此发布了一个安全公告(HPSBUX9808-083)以及相应补丁:
+HPSBUX9808-083：Security Vulnerability in BIND on HP-UX
+链接：
+补丁下载：
+ftp://us-ffs.external.hp.com/hp-ux_patches
+
+操作系统及补丁号：
+HP-UX release  9.0, 9.01, 9.03, 9.04, 9.05, & 9.07: PHNE_13187
+HP-UX release  10.00, 10.01, 10.10 and 10.20:       PHNE_14617
+--->>> HP-UX release  10.16:                              *PHNE_16232
+HP-UX release  10.24:                             **PHNE_16204
+HP-UX release  11.00:                               PHNE_12957
+SGI
+---
+SGI已经为此发布了一个安全公告(19980603-01-PX)以及相应补丁:
+19980603-01-PX：IRIX BIND DNS Vulnerabilities
+链接：
+ftp://patches.sgi.com/support/free/security/advisories/19980603-01-PX
+
+补丁下载：
+http://support.sgi.com/
+
+ftp://patches.sgi.com/support/patchset/
+
+补丁情况：
+系统版本       是否受影响      补丁号    
+----------     -----------     ---------     
+IRIX 3.x          yes          not avail 
+IRIX 4.x          yes          not avail 
+IRIX 5.0.x        yes          not avail 
+IRIX 5.1.x        yes          not avail 
+IRIX 5.2          yes          not avail 
+IRIX 5.3          yes           3123
+IRIX 6.0.x        yes          not avail 
+IRIX 6.1          yes          not avail 
+IRIX 6.2          yes           3117
+IRIX 6.3          yes           2740
+IRIX 6.4          yes           2741
+IRIX 6.5          no
+Sun
+---
+Sun已经为此发布了一个安全公告(Sun-00180)以及相应补丁:
+Sun-00180：BIND
+链接：
+http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc;=secbull/180&type;=0&nav;=sec.sba
+
+补丁下载：
+http://sunsolve.sun.com/sunsolve/pubpatches/patches.html
+
+操作系统版本及对应的补丁号：
+操作系统            补丁号    
+_________________   _________ 
+Solaris 2.6         105755-07 
+Solaris 2.6_x86     105756-07
+Solaris 2.5.1       103663-15
+Solaris 2.5.1_x86   103664-15
+Solaris 2.5         103667-11
+Solaris 2.5_x86     103668-11
+Solaris 2.4         102479-13
+Solaris 2.4_x86     102480-11
+Solaris 2.3         101359-10
+SunOS 4.1.4         106866-02
+SunOS 4.1.3_U1      106865-02        
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0010
+CVE英文标题：
+   Denial of Service vulnerability in BIND 8 Releases via maliciously formatted DNS messages.
+CNNVE中文标题：
+   BIND服务拒绝漏洞
+CNNVE信息：
+   BIND 8 Releases恶意格式化DNS信息，导致服务拒绝漏洞。    
+CNNVD号：
+   CNNVD-199804-017
+CVSS分值：
+   5
+机密性影响：
+   NONE
+完整性影响：
+   NONE
+可用性影响：
+   PARTIAL
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Red Hat Linux 4.2
+NetBSD 1.3.1
+ISC BIND 4.9
+IBM AIX 4.3
+ISC BIND 8
+IBM AIX 4.1
+IBM AIX 4.2
+Red Hat Linux 5.0
+NetBSD 1.3
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1998-04-08 00:00:00
+cnnvd更新日期：
+   2005-05-02 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0011
+CVE英文标题：
+   Denial of Service vulnerabilities in BIND 4.9 and BIND 8 Releases via CNAME record and zone transfer.
+CNNVE中文标题：
+   BIND服务拒绝漏洞
+CNNVE信息：
+   BIND 4.9版本和BIND 8 Releases版本通过CNAME记录和区域转换导致服务拒绝漏洞。    
+CNNVD号：
+   CNNVD-199804-013
+CVSS分值：
+   10
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   NETWORK
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Red Hat Linux 4.2
+NetBSD 1.3.1
+ISC BIND 4.9
+IBM AIX 4.3
+ISC BIND 8
+IBM AIX 4.1
+IBM AIX 4.2
+Red Hat Linux 5.0
+NetBSD 1.3
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1998-04-08 00:00:00
+cnnvd更新日期：
+   2007-02-27 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0012
+CVE英文标题：
+   Some web servers under Microsoft Windows allow remote attackers to bypass access restrictions for files with long file names.
+CNNVE中文标题：
+   Microsoft Windows绕过使用权漏洞
+CNNVE信息：
+   Microsoft Windows下的一些网络服务器存在漏洞。远程攻击者会绕过带有长文件名的文件的使用权限制。    
+CNNVD号：
+   CNNVD-199802-009
+CVSS分值：
+   5
+机密性影响：
+   PARTIAL
+完整性影响：
+   NONE
+可用性影响：
+   NONE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Microsoft personal_web_server 4.0
+Microsoft Frontpage
+Netscape FastTrack 3.01
+Netscape Netscape Enterprise Server 3.0
+Microsoft IIS 4.0
+Netscape FastTrack 2.01
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1998-02-06 00:00:00
+cnnvd更新日期：
+   2006-09-05 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0013
+CVE英文标题：
+   Stolen credentials from SSH clients via ssh-agent program, allowing other local users to access remote accounts belonging to the ssh-agent user.
+CNNVE中文标题：
+   SSH客户端盗用证书账户访问漏洞
+CNNVE信息：
+   来自SSH客户端的盗用证书借助ssh-agent程序，其他本地用户可以访问属于ssh-agent用户的远程账户。    
+CNNVD号：
+   CNNVD-199801-018
+CVSS分值：
+   7.5
+机密性影响：
+   PARTIAL
+完整性影响：
+   PARTIAL
+可用性影响：
+   PARTIAL
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   SSH Communications Security SSH daemon 1.2.6
+SSH Communications Security SSH daemon 1.2.3
+SSH Communications Security SSH daemon 1.2.0
+SSH Communications Security SSH daemon 1.2.2
+SSH Communications Security SSH daemon 1.2.4
+SSH Communications Security SSH daemon 1.2.10
+SSH Communications Security SSH daemon 1.2.5
+SSH Communications Security SSH daemon 1.2.11
+SSH Communications Security SSH daemon 1.2.7
+SSH Communications Security SSH daemon 1.2.12
+SSH Communications Security SSH daemon 1.2.8
+SSH Communications Security SSH daemon 1.2.9
+SSH Communications Security SSH daemon 1.2.13
+SSH Communications Security SSH daemon 1.2.14
+SSH Communications Security SSH daemon 1.2.1
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1998-01-22 00:00:00
+cnnvd更新日期：
+   2006-09-05 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0014
+CVE英文标题：
+   Unauthorized privileged access or denial of service via dtappgather program in CDE.
+CNNVE中文标题：
+   CDE dtappgather程序非法访问及服务拒绝漏洞
+CNNVE信息：
+   CDE中的dtappgather程序存在漏洞。导致非法的有特权的访问或者服务拒绝。    
+CNNVD号：
+   CNNVD-199801-017
+CVSS分值：
+   7.2
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   LOCAL
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   HP-UX 11.00
+HP HP-UX 10.10
+IBM AIX 4.3
+IBM AIX 4.1
+IBM AIX 4.2
+HP HP-UX 10.20
+HP VVOS 10.24
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1998-01-21 00:00:00
+cnnvd更新日期：
+   2005-05-02 00:00:00 
+攻击路径：
+   本地
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0015
+CVE英文标题：
+   Teardrop IP denial of service.
+CNNVE中文标题：
+   多家厂商系统TCP/IP实现Teardrop拒绝服务攻击漏洞
+CNNVE信息：
+   TCP/IP网络协议栈是大多数操作系统均实现的用于Internet联网的最被广为使用的网络协议。早期Windows 3.1/95/NT系统及Linux内核TCP/IP协议栈实现上存在漏洞，远程攻击者可以利用此漏洞对服务器进行拒绝服务攻击，造成主机死机或崩溃。早期的Windows 3.1/95/NT系统及Linux内核2.0.32版本之前的TCP/IP实现在重组不正常的重叠IP分片时存在问题，当操作系统收到这种不正常的IP分片包时可能导致不正常不稳定的系统行为从连接丢失到系统崩溃。此漏洞相关信息在新闻组和邮件列表中可以用syndrop、overdrop、nestea为关键字搜索到。    
+CNNVD号：
+   CNNVD-199712-010
+CVSS分值：
+   5
+机密性影响：
+   NONE
+完整性影响：
+   NONE
+可用性影响：
+   PARTIAL
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   HP HP-UX 10.24
+NetBSD 1.1
+HP-UX 11.00
+HP HP-UX 10.16
+Microsoft Windows NT 3.5.1 SP2
+Sun SunOS 4.1.3u1
+HP HP-UX 10.30
+HP HP-UX 9.01
+Sun SunOS 4.1.4
+Microsoft Windows 4.0 sp1
+HP HP-UX 9.3
+Microsoft Windows NT 4.0
+HP HP-UX 10.20
+Microsoft Windows NT 3.5.1
+Microsoft Windows 4.0 sp2
+Microsoft Windows NT 3.5.1 SP1
+NetBSD 1.2.1
+NetBSD 1.2
+NetBSD 1.0
+HP HP-UX 9.7
+HP HP-UX 9.05
+HP HP-UX 9.0
+HP HP-UX 9.4
+HP HP-UX 10.01
+HP HP-UX 10
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   输入验证
+cnnvd发布日期：
+   1997-12-16 00:00:00
+cnnvd更新日期：
+   2009-03-04 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   124
+公告与补丁：
+   临时解决方法：
+如果您不能立刻安装补丁或者升级，CNNVD建议您采取以下措施以降低威胁：
+* 没有合适的临时解决方法。
+厂商补丁：
+Linux
+-----
+目前厂商已经在2.0.32以上版本的内核中修补了此安全漏洞，请到厂商的主页下载新版权内核：
+http://www.kenerl.org
+Microsoft
+---------
+Microsoft已经为此发布了相应补丁:
+补丁下载：
+* Windows 95
+
+http://support.microsoft.com/download/support/mslfiles/Vipup11.exe
+
+
+http://support.microsoft.com/download/support/mslfiles/Vipup20.exe
+(Winsock 2.0)
+* Windows NT Patch
+
+ftp://ftp.microsoft.com/bussys/winnt/winnt-public/fixes/usa/NT40/hotfixes-postSP3/simptcp-fix/
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0016
+CVE英文标题：
+   Land IP denial of service.
+CNNVE中文标题：
+   多家厂商TCP/IP实现处理相同源、目标IP数据包失败拒绝服务攻击漏洞
+CNNVE信息：
+   TCP/IP网络协议栈是大多数操作系统均实现的用于Internet联网的最被广为使用的网络协议。早期BSD派生系统(Linux除外)及Windows系统TCP/IP协议栈实现上存在漏洞，远程攻击者可以利用此漏洞对服务器进行拒绝服务攻击。发送一个源地址和目标地址相同，源端口和目的端口也相同的SYN包到有漏洞的目标系统，这就是著名的Land攻击。由于TCP/IP实现上的问题，目标系统对此种畸形包的处理可能会出问题。不同的系统对Land攻击反应不同，许多老版本的UNIX类操作系统将崩溃，NT的CPU资源占用将接近100%(大约持续五分钟)。此漏洞相关信息在新闻组和邮件列表中可以用\"Land denial of service\"、\"Land Attack\"为关键字搜索到。    
+CNNVD号：
+   CNNVD-199712-002
+CVSS分值：
+   5
+机密性影响：
+   NONE
+完整性影响：
+   NONE
+可用性影响：
+   PARTIAL
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Microsoft Windows 95
+HP HP-UX 10.24
+NetBSD 1.1
+HP-UX 11.00
+NetBSD 1.0
+Microsoft WinSock 2.0
+HP HP-UX 10.16
+HP HP-UX 10.10
+HP HP-UX 9.7
+HP HP-UX 9.05
+Sun SunOS 4.1.3u1
+HP HP-UX 10.30
+HP HP-UX 9.0
+HP HP-UX 9.4
+HP HP-UX 9.01
+Sun SunOS 4.1.4
+Microsoft Windows NT 4.0
+HP HP-UX 9.3
+HP HP-UX 10.00
+HP HP-UX 10.20
+HP HP-UX 10.01
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1997-12-01 00:00:00
+cnnvd更新日期：
+   2006-11-16 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   2666
+公告与补丁：
+   厂商补丁：
+FreeBSD
+-------
+FreeBSD已经为此发布了一个安全公告(SA-98:01)以及相应补丁:
+SA-98:01：LAND attack can cause harm to running FreeBSD systems
+链接：
+ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/SA-98:01.asc
+
+补丁下载：
+Apply the enclosed patch.  There are two patches, one for FreeBSD
+-current, and another for FreeBSD 2.2-stable.
+patch for -current prior to Jan 21, 1998.  Found in land-current.
+Index: tcp_input.c
+===================================================================
+RCS file: /home/imp/FreeBSD/CVS/src/sys/netinet/tcp_input.c,v
+retrieving revision 1.67
+retrieving revision 1.68
+diff -u -r1.67 -r1.68
+--- tcp_input.c     1997/12/19 23:46:15     1.67
++++ tcp_input.c     1998/01/21 02:05:59     1.68
+@@ -626,6 +613,7 @@
+* If the state is LISTEN then ignore segment if it contains an RST.
+* If the segment contains an ACK then it is bad and send a RST.
+* If it does not contain a SYN then it is not interesting; drop it.
++    * If it is from this socket, drop it, it must be forged.
+* Don't bother responding if the destination was a broadcast.
+* Otherwise initialize tp->rcv_nxt, and tp->irs, select an initial
+* tp->iss, and send a segment:
+@@ -644,6 +632,9 @@
+goto dropwithreset;
+if ((tiflags & TH_SYN) == 0)
+goto drop;
++           if ((ti->ti_dport == ti->ti_sport) &&
++               (ti->ti_dst.s_addr == ti->ti_src.s_addr))
++                   goto drop;
+/*
+* RFC1122 4.2.3.10, p. 104: discard bcast/mcast SYN
+* in_broadcast() should never return true on a received
+@@ -762,6 +753,23 @@
+}
+
+/*
++    * If the state is SYN_RECEIVED:
++    *      if seg contains SYN/ACK, send a RST.
++    *      if seg contains an ACK, but not for our SYN/ACK, send a RST.
++    */
++   case TCPS_SYN_RECEIVED:
++           if (tiflags & TH_ACK) {
++                   if (tiflags & TH_SYN) {
++                           tcpstat.tcps_badsyn++;
++                           goto dropwithreset;
++                   }
++                   if (SEQ_LEQ(ti->ti_ack, tp->snd_una) ||
++                       SEQ_GT(ti->ti_ack, tp->snd_max))
++                           goto dropwithreset;
++           }
++           break;
++
++   /*
+* If the state is SYN_SENT:
+*      if seg contains an ACK, but not for our SYN, drop the input.
+*      if seg contains a RST, then drop the connection.
+@@ -1176,14 +1184,11 @@
+switch (tp->t_state) {
+
+/*
+-    * In SYN_RECEIVED state if the ack ACKs our SYN then enter
+-    * ESTABLISHED state and continue processing, otherwise
+-    * send an RST.
++    * In SYN_RECEIVED state, the ack ACKs our SYN, so enter
++    * ESTABLISHED state and continue processing.
++    * The ACK was checked above.
+*/
+case TCPS_SYN_RECEIVED:
+-           if (SEQ_GT(tp->snd_una, ti->ti_ack) ||
+-               SEQ_GT(ti->ti_ack, tp->snd_max))
+-                   goto dropwithreset;
+
+tcpstat.tcps_connects++;
+soisconnected(so);
+patch for 2.2.5 and 2.2.5-stable before Jan 30, 1998 found in land-22
+Index: tcp_input.c
+===================================================================
+RCS file: /home/imp/FreeBSD/CVS/src/sys/netinet/tcp_input.c,v
+retrieving revision 1.54.2.6
+retrieving revision 1.54.2.7
+diff -u -r1.54.2.6 -r1.54.2.7
+--- tcp_input.c     1997/11/20 21:45:34        
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0017
+CVE英文标题：
+   FTP servers can allow an attacker to connect to arbitrary ports on machines other than the FTP client, aka FTP bounce.
+CNNVE中文标题：
+   多个供应商FTP跳转攻击漏洞
+CNNVE信息：
+   FTP服务器存在漏洞。攻击者可以连接机器上的任意端口，出了FTP端口，也称为FTP跳转。    
+CNNVD号：
+   CNNVD-199712-006
+CVSS分值：
+   7.5
+机密性影响：
+   PARTIAL
+完整性影响：
+   PARTIAL
+可用性影响：
+   PARTIAL
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Sun Microsystems Solaris 2.4
+NetBSD 1.1
+Siemens Reliant UNIX
+FreeBSD 1.0
+Sun SunOS 4.1.3u1
+IBM AIX 4.3
+Sun SunOS 4.1.4
+FreeBSD 2.1.0
+Sun Microsystems Solaris 2.3
+NetBSD 1.2.1
+NetBSD 1.2
+FreeBSD 2.1.7
+NetBSD 1.0
+FreeBSD 2.0
+IBM AIX 3.2
+IBM AIX 4.1
+Sun Microsystems Solaris 2.5.1
+IBM AIX 4.2
+Sun Microsystems Solaris 2.5
+FreeBSD 1.1
+FreeBSD 1.2
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   设计错误
+cnnvd发布日期：
+   1997-12-10 00:00:00
+cnnvd更新日期：
+   2006-09-20 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   126
+公告与补丁：
+   SGI have released an advisory (20030304-01-P) with further details that address this issue. A number of patches to fix this vulnerability have also been provided. SGI have recommended that users upgrade to IRIX 6.5.20 or install the appropriate version specific patch.
+On SGI IRIX versions 6.5.6 and later this issue may be mitigated by running the FTP server with the -p option. If the FTP server is run via inetd, then the inetd configuration file should be modified to reflect this.
+In the reference section of this vulnerabilty you will find CERT Advisory CA-97.27.FTP_bounce which details fix information for the majority of the known vulnerable vendors. Further information is also referenced to allow you to test your ftpd for this issue.        
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0018
+CVE英文标题：
+   Buffer overflow in statd allows root privileges.
+CNNVE中文标题：
+   多个供应商Statd缓冲区溢出漏洞漏洞
+CNNVE信息：
+   Statd存在缓冲区溢出漏洞，可以允许根特权。    
+CNNVD号：
+   CNNVD-199712-005
+CVSS分值：
+   10
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   NETWORK
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   SGI IRIX 5.0.1
+SGI IRIX 5.2
+SGI IRIX 5.1
+SGI IRIX 5.1.1
+SGI IRIX 5.3
+IBM AIX 3.2
+IBM AIX 4.1
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   缓冲区溢出
+cnnvd发布日期：
+   1997-12-05 00:00:00
+cnnvd更新日期：
+   2007-07-16 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   Statd is required for use in deployed NFS systems. Therefore if you require NFS on systems which are vulnerable to this attack it is suggested you upgrade your OS or obtain the appropriate patches from your vendor.
+Relavant patch information is contained in the reference section via the attached vendor advisories.
+Caldera has released a hotfix for the Unixware 7 statd implementation.
+SCO Unixware 7.0
+SCO Unixware 7 erg711747a.Z
+ftp://ftp.sco.com/pub/security/unixware/sr848098/erg711747a.Z
+SCO Unixware 7.0.1
+SCO Unixware 7 erg711747a.Z
+ftp://ftp.sco.com/pub/security/unixware/sr848098/erg711747a.Z
+SCO Unixware 7.1
+SCO Unixware 7 erg711747a.Z
+ftp://ftp.sco.com/pub/security/unixware/sr848098/erg711747a.Z
+SCO Unixware 7.1.1
+SCO Unixware 7 erg711747a.Z
+ftp://ftp.sco.com/pub/security/unixware/sr848098/erg711747a.Z
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0019
+CVE英文标题：
+   Delete or create a file via rpc.statd, due to invalid information.
+CNNVE中文标题：
+   删除或创建文件漏洞
+CNNVE信息：
+   由于无效信息，存在借助rpc.statd删除或创建文件的漏洞。    
+CNNVD号：
+   CNNVD-199604-004
+CVSS分值：
+   5
+机密性影响：
+   NONE
+完整性影响：
+   PARTIAL
+可用性影响：
+   NONE
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Sun Microsystems Solaris 2.4
+Sun Microsystems Solaris 2.3
+IBM AIX 3.2
+IBM AIX 4.1
+Sun SunOS 4.1.4
+Sun SunOS 4.1.3
+Sun Microsystems Solaris 2.5
+SGI IRIX 6.1
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1996-04-24 00:00:00
+cnnvd更新日期：
+   2006-09-21 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0020
+CVE英文标题：
+   ** REJECT **  DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: CVE-1999-0032.  Reason: This candidate is a duplicate of CVE-1999-0032.  Notes: All CVE users should reference CVE-1999-0032 instead of this candidate.  All references and descriptions in this candidate have been removed to prevent accidental usage.
+CNNVE中文标题：
+   暂无CNNVE中文标题
+CNNVE信息：
+   暂无CNNVE信息
+CNNVD号：
+   暂无CNNVD号
+CVSS分值：
+   暂无CVSS分值
+机密性影响：
+   暂无机密性影响
+完整性影响：
+   暂无机密性影响
+可用性影响：
+   暂无机密性影响
+攻击复杂度：
+   暂无机密性影响
+攻击向量：
+   暂无机密性影响
+身份认证：
+   暂无机密性影响
+CPE (受影响的平台与产品)：
+   
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   暂无漏洞类型
+cnnvd发布日期：
+   暂无cnnvd发布日期
+cnnvd更新日期：
+   暂无cnnvd更新日期
+攻击路径：
+   暂无攻击路径
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   暂无公告与补丁
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0021
+CVE英文标题：
+   Arbitrary command execution via buffer overflow in Count.cgi (wwwcount) cgi-bin program.
+CNNVE中文标题：
+   Count.cgi (wwwcount)远程缓冲区溢出漏洞
+CNNVE信息：
+   Count.cgi (wwwcount)是一个非常流行的Web站点跟踪统计CGI程序。一般它作为Web页面点击数统计。1997年10月，这个程序被发现了两个远程漏洞。第一个漏洞比较轻微，它能允许远程用户浏览到受限制的.GIF文件，可能泄漏.GIF文件里潜在的敏感数据。第二个漏洞比较严重，count.cgi程序在处理QUERY_STRING环境变量的时候存在缓冲区溢出漏洞。远程攻击者可以发送一个超长的请求给程序就能进行溢出攻击，以Web用户的权限在系统执行任意命令。    
+CNNVD号：
+   CNNVD-199711-006
+CVSS分值：
+   7.5
+机密性影响：
+   PARTIAL
+完整性影响：
+   PARTIAL
+可用性影响：
+   PARTIAL
+攻击复杂度：
+   LOW
+攻击向量：
+   
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   其他
+cnnvd发布日期：
+   1997-11-05 00:00:00
+cnnvd更新日期：
+   2005-05-02 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   厂商补丁：
+Muhammad A. Muquit
+------------------
+目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载wwwcount 2.4以上版本：
+http://www.fccc.edu/users/muquit/Count.html
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0022
+CVE英文标题：
+   Local user gains root privileges via buffer overflow in rdist, via expstr() function.
+CNNVE中文标题：
+   Rdist权限许可和访问控制漏洞
+CNNVE信息：
+   Rdist存在缓冲区溢出漏洞。本地用户可以借助expstr()函数获取根权限。    
+CNNVD号：
+   CNNVD-199607-002
+CVSS分值：
+   7.2
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   LOCAL
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   IBM AIX 3.2.5
+IBM AIX 3.1
+IBM AIX 4.1.2
+SGI IRIX 6.4
+SGI IRIX 5.2
+IBM AIX 4.1.4
+SGI IRIX 6.0
+FreeBSD 2.0.5
+FreeBSD 2.1.0
+IBM AIX 4.1.5
+SGI IRIX 6.0.1 XFS
+HP HP-UX 10.00
+IBM AIX 3.2.4
+IBM AIX 4.1.3
+SGI IRIX 6.0.1
+SGI IRIX 6.3
+SGI IRIX 5.3 XFS
+SGI IRIX 5.0.1
+SGI IRIX 6.2
+SGI IRIX 5.3
+SGI IRIX 5.1.1
+SGI IRIX 5.1
+FreeBSD 2.0
+IBM AIX 3.2
+IBM AIX 4.1
+IBM AIX 4.2
+IBM AIX 4.1.1
+SGI IRIX 6.1
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   缓冲区溢出
+cnnvd发布日期：
+   1996-07-03 00:00:00
+cnnvd更新日期：
+   2005-05-02 00:00:00 
+攻击路径：
+   本地
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0023
+CVE英文标题：
+   Local user gains root privileges via buffer overflow in rdist, via lookup() function.
+CNNVE中文标题：
+   Rdist权限许可和访问控制漏洞
+CNNVE信息：
+   Rdist存在缓冲区溢出漏洞。本地用户可以借助lookup()函数获取根权限。    
+CNNVD号：
+   CNNVD-199607-006
+CVSS分值：
+   7.2
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   LOCAL
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   Sun Microsystems Solaris 2.4
+Sun SunOS 4.1.3u1
+FreeBSD 2.0.5
+Sun SunOS 4.1.4
+FreeBSD 2.1.0
+FreeBSD 2.2
+Sun Microsystems Solaris 2.3
+FreeBSD 2.0
+IBM AIX 4.1
+IBM AIX 3.2
+Sun Microsystems Solaris 2.5.1
+Sun SunOS 4.1.3
+IBM AIX 4.2
+Sun Microsystems Solaris 2.5
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   缓冲区溢出
+cnnvd发布日期：
+   1996-07-24 00:00:00
+cnnvd更新日期：
+   2006-02-20 00:00:00 
+攻击路径：
+   本地
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0024
+CVE英文标题：
+   DNS cache poisoning via BIND, by predictable query IDs.
+CNNVE中文标题：
+   DNS缓存器中毒漏洞
+CNNVE信息：
+   DNS缓存器可能经由BIND通过预测查询IDs而中毒。    
+CNNVD号：
+   CNNVD-199708-008
+CVSS分值：
+   5
+机密性影响：
+   NONE
+完整性影响：
+   PARTIAL
+可用性影响：
+   NONE
+攻击复杂度：
+   LOW
+攻击向量：
+   NETWORK
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   ISC BIND 4.9.5
+IBM AIX 4.1
+ISC BIND 8.1
+IBM AIX 4.2
+NEC UP-UX_V 4.2MP
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   未知
+cnnvd发布日期：
+   1997-08-13 00:00:00
+cnnvd更新日期：
+   2005-05-02 00:00:00 
+攻击路径：
+   远程
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   
+=========================================================
+=========================================================
+CVE号：
+   CVE-1999-0025
+CVE英文标题：
+   root privileges via buffer overflow in df command on SGI IRIX systems.
+CNNVE中文标题：
+   IRIX df 漏洞
+CNNVE信息：
+   基于SGI IRIX系统的df命令存在缓冲区溢出漏洞。可以借助该漏洞获得根特权。    
+CNNVD号：
+   CNNVD-199707-028
+CVSS分值：
+   7.2
+机密性影响：
+   COMPLETE
+完整性影响：
+   COMPLETE
+可用性影响：
+   COMPLETE
+攻击复杂度：
+   LOW
+攻击向量：
+   LOCAL
+身份认证：
+   NONE
+CPE (受影响的平台与产品)：
+   
+CWE (弱点类目)：
+   暂无 CWE (弱点类目)
+漏洞类型：
+   缓冲区溢出
+cnnvd发布日期：
+   1997-07-16 00:00:00
+cnnvd更新日期：
+   2005-05-02 00:00:00 
+攻击路径：
+   本地
+BugtraqID：
+   暂无BugtraqID
+公告与补丁：
+   Suitable temporary solutions include removing the setuid bit from the binary: chmod -s /bin/df
+Patches are available from SGI at
+http://support.sgi.com.
+=========================================================
