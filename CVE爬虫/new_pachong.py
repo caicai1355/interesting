@@ -381,7 +381,7 @@ def cve_analyse(content):
 	else:
 		reportAndHotfixStr = reportAndHotfix.group().replace('&nbsp;','')
 		soup = bs4.BeautifulSoup(reportAndHotfixStr)
-		reportAndHotfixStr = ''.join([i.lstrip().rstrip('\n') +'\n' for i in soup.td.strings]).rstrip('\n')
+		reportAndHotfixStr = ''.join([i.lstrip().rstrip('\n') +'\n' for i in soup.td.strings if i != '' and i != '\n']).rstrip('\n')
 		strTemp = "   " + reportAndHotfixStr
 	file.write(strTemp + '\n')
 	print strTemp.decode('UTF-8').encode('GB18030')
