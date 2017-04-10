@@ -496,7 +496,7 @@ def cve_get_from_local():
 
 #==============================================================
 if __name__ == '__main__':
-	file = open('1a.txt','w+')
+	file = open('cve.log','w+')
 	cve_get_from_web()
 
 
